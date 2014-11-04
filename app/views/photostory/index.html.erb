@@ -1,12 +1,20 @@
 <h1><%= current_user.email  %>'s Stories</h1>
 
+
+<div class="container">
+  <div class="row">
 <% @stories.each do |story| %>
-  <h2><%= story.name  %></h2>
-    <ul>
-      <li><%= image_tag story.photoone, {height: 45} %></li>
-      <li><%= image_tag story.phototwo, {height: 45} %></li>
-    </ul>  
-<% end %>    
+    <div class="col-md-4">
+      <h2><%= story.name  %></h2>
+        <ul>
+          <li><%= image_tag story.photoone, {height: 75} %></li>
+          <li><%= image_tag story.phototwo, {height: 75} %></li>
+        </ul>
+    </div>   
+<% end %>  
+  </div>    
+</div>      
+    
 
 
-  <p><a id="newstorybutton" class="btn btn-primary btn-lg" role="button">Create New Photo Story!</a></p>
+<a id="newstorybutton" class="btn btn-primary btn-lg" role="button">Create New Photo Story!</a>
