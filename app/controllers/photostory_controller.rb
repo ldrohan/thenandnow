@@ -10,12 +10,12 @@ class PhotostoryController < ApplicationController
 	end
 
 	def new
-		#new band form
+		@story = Story.new
 	end	
 
 	def create
-		@story = Story.create(story_params)
-
+		@story = Story.new(story_params)
+		@story.user_id = current_user.id if current_user
 		respond_to do |format|
 			if @story.save
 				format.json { render json: @story, status: :created }
