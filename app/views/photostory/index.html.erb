@@ -1,5 +1,13 @@
-<h1><%= current_user.email  %>'s Stories</h1>
+<nav class="navbar navbar-default" role="navigation">
+<!--   <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p> -->
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Then And Now</a>
+    <div id="signout"><%= link_to :logout, destroy_user_session_path, :method => :delete %></div>
+  </div>
+</nav>
 
+<h1><%= current_user.email  %>'s Stories</h1>
 
 <div id="photostoriescontainer" class="container">
   <div class="row">

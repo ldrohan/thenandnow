@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  
   root 'photostory#index'
 
   get 'photostory/index' => 'photostory#index'

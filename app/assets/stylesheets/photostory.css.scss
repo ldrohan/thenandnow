@@ -9,9 +9,33 @@ body {
 	text-align: center;
 }
 
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    #signout {
+    	float: right;
+    }
+}
+.navbar-brand {float:none;}
+
 li {
 	list-style-type: none;
 	display: inline;
+}
+
+.btn {
+	border-radius: 0px;
+}
+
+.btn:active,
+.btn:focus,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .btn-lg {
