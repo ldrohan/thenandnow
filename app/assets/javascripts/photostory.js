@@ -10,17 +10,17 @@ $(document).ready(function(){
 		var $photoDiv = '#photoDiv'
 		var imgAPI = "https://maps.googleapis.com/maps/api/streetview?size=75x75&fov=120&pitch=10&location="
 
-		ajaxPOST(postURL,storyName,address,imgAPI,fileImage);
-
-		$($photoDiv).append("<h2>" + storyName + "</h2><ul><li><img src=" + imgAPI + address + "/></li><li><img src=" + fileImage + "/><li></ul>");
-			$('#newStoryModal').modal('hide');
-			})
+		ajaxPOST(postURL,storyName,address,imgAPI,fileImage,$photoDiv);
+	})
 
 
-	function ajaxPOST(postURL,storyName,address,imgAPI,fileImage) {
+	function ajaxPOST(postURL,storyName,address,imgAPI,fileImage,$photoDiv) {
 		$.ajax({url:(postURL), method: ('post'), 
-				data: {"photoStory": {"name":storyName, "address":address, "apiImage":imgAPI + address, "fileImage":fileImage}}, dataType: "json", success: function(data) {
-				console.log("success");
+				data: {"photoStory": {"name":storyName, "address":address, "apiImage":imgAPI + address, "fileImage":fileImage}}, 
+					dataType: "json", success: function(data) {
+						console.log("success");
+						$($photoDiv).append("<h2>" + storyName + "</h2><ul><li><img src=" + imgAPI + address + "/></li><li><img src=" + fileImage + "/><li></ul>");
+						$('#newStoryModal').modal('hide');
 				} 
 			});
 	}

@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+
   root 'photostory#index'
 
   get 'photostory/index' => 'photostory#index'
+  get 'photostory/delete' => 'photostory#delete'
 
   post 'photostory/create' => 'photostory#create'
   # The priority is based upon order of creation: first created -> highest priority.

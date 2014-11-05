@@ -18,13 +18,13 @@
           <li><%= image_tag story.photoone, {height: 75} %></li>
           <li><%= image_tag story.phototwo, {height: 75} %></li>
         </ul>
+        <% story_arr = [] %>
+        <% story_arr.push(story) %>
+        <footer> <%= story_arr.map{|story| story.location}.join(" ").split("%20").join(" ") %> </footer>
     </div>   
-<% end %>  
+<% end %>
   </div>    
-</div>      
-    
-
-
+</div> 
 <!-- Button trigger modal -->
 <button id="showModalButton" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newStoryModal">
   Create New Photo Story

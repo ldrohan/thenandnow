@@ -3,6 +3,7 @@ class PhotostoryController < ApplicationController
 	
 	def index
 		@stories =  Story.where(user_id: current_user)
+
 		respond_to do |format|
 			format.html
 			format.json {render :json => @stories}
@@ -31,7 +32,12 @@ class PhotostoryController < ApplicationController
 	end
 		
 	def delete
-
+		@story = Story.find(params[:id])
+    @story.destroy
+    
+    respond_to do |format|
+      format.json { render json: @story, status: :ok }
+    end
 	end	
 
 	private
