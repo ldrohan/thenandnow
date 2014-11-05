@@ -8,7 +8,7 @@ $(document).ready(function(){
 		var address = postData[1].value.split(" ").join("%20");
 		var fileImage = postData[2].value
 		var $photoDiv = '#photoDiv'
-		var imgAPI = "https://maps.googleapis.com/maps/api/streetview?size=75x75&fov=120&pitch=10&location="
+		var imgAPI = "https://maps.googleapis.com/maps/api/streetview?size=120x120&fov=120&pitch=10&location="
 
 		ajaxPOST(postURL,storyName,address,imgAPI,fileImage,$photoDiv);
 	})

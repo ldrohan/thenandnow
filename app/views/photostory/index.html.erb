@@ -12,15 +12,16 @@
 <div id="photostoriescontainer" class="container">
   <div class="row">
 <% @stories.each do |story| %>
-    <div id="photoDiv" class="col-md-4 col-sm-4">
+    <div id="photoDiv" class="col-md-4 col-sm-6">
       <h2><%= story.name  %></h2>
         <ul>
-          <li><%= image_tag story.photoone, {height: 75} %></li>
-          <li><%= image_tag story.phototwo, {height: 75} %></li>
+          <li><%= image_tag story.photoone, {height: 120} %></li>
+          <li><%= image_tag story.phototwo, {height: 120} %></li>
         </ul>
+        <!-- Create single item array to use .map haml hack below for method joining -->
         <% story_arr = [] %>
         <% story_arr.push(story) %>
-        <footer> <%= story_arr.map{|story| story.location}.join(" ").split("%20").join(" ") %> </footer>
+      <footer> <%= story_arr.map{|story| story.location}.join(" ").split("%20").join(" ") %> </footer>
     </div>   
 <% end %>
   </div>    
