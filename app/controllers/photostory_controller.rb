@@ -14,6 +14,7 @@ class PhotostoryController < ApplicationController
 	end	
 
 	def create
+		binding.pry
 		@story = Story.new(story_params)
 		@story.user_id = current_user.id if current_user
 		respond_to do |format|
@@ -31,6 +32,6 @@ class PhotostoryController < ApplicationController
 
 	private
 	def story_params
-		params.require(:story).permit(:name, :photoone, :phototwo, :user_id)
+		params.require(:story).permit(:name, :photoone, :phototwo, :user_id, :location)
 	end	
 end

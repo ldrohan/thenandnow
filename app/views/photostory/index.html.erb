@@ -3,7 +3,7 @@
   <p class="alert"><%= alert %></p> -->
   <div class="navbar-header">
     <a class="navbar-brand" href="#">Then And Now</a>
-    <div id="signout"><%= link_to :logout, destroy_user_session_path, :method => :delete %></div>
+    <div id="signout"> <%= link_to :logout, destroy_user_session_path, :method => :delete %></div>
   </div>
 </nav>
 
@@ -12,7 +12,7 @@
 <div id="photostoriescontainer" class="container">
   <div class="row">
 <% @stories.each do |story| %>
-    <div class="col-md-4 col-sm-4">
+    <div id="photoDiv" class="col-md-4 col-sm-4">
       <h2><%= story.name  %></h2>
         <ul>
           <li><%= image_tag story.photoone, {height: 75} %></li>
@@ -39,27 +39,25 @@
         <h4 class="modal-title" id="myModalLabel">Add A New Photo Story</h4>
       </div>
       <div class="modal-body">
-        <form role="form">
+        <form name="ajaxForm" id="ajaxForm" role="form">
           <div class="form-group">
             <label for="photoStoryname">PhotoStory Name</label>
-            <input class="form-control" id="photoStoryName" placeholder="Enter Name">
+            <input name="photoStoryName" class="form-control" id="photoStoryName" placeholder="Enter Name">
           </div>
           <div class="form-group">
-            <label for="photoOne">Photo One</label>
-            <input type="Photo" class="form-control" id="photoOne" placeholder="Photo">
+            <label for="photoOne">Street Address</label>
+            <input name="location" type="string" class="form-control" id="location" placeholder="Address">
           </div>
           <div class="form-group">
-            <label for="exampleInputFile">Photo File</label>
-            <input type="file" id="photoInputFile">
-            <!-- <p class="help-block">Example block-level help text here.</p> -->
+            <!-- <label for="exampleInputFile">Photo File</label>
+            <input name="filePhoto" type="file" name="photo" />
+            <! <input name="photoTwo" type="file" id="photoInputFile"> -->
+            <label for="photoOne">Nastolgic Photo URL</label>
+            <input name="filePhoto" type="string" class="form-control" id="filePhoto" placeholder="URL">
           </div>
           
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button id="formSubmit" type="submit" class="btn btn-default">Submit</button>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
