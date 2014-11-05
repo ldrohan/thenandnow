@@ -7,16 +7,16 @@
   </div>
 </nav>
 
-<h1><%= current_user.email  %>'s Stories</h1>
+<h1><%= current_user.email.capitalize  %>'s Stories</h1>
 
 <div id="photostoriescontainer" class="container">
   <div class="row">
 <% @stories.each do |story| %>
-    <div id="photoDiv" class="col-md-4 col-sm-6">
-      <h2><%= story.name  %></h2>
-        <ul>
-          <li><%= image_tag story.photoone, {height: 120} %></li>
-          <li><%= image_tag story.phototwo, {height: 120} %></li>
+    <div id="photoDiv" class="container col-lg-4 col-md-4 col-sm-4">
+      <h2><%= story.name.capitalize  %></h2>
+        <ul class="container col-md-12">
+          <li class="col-md-6"><%= image_tag story.photoone, {height: 120} %></li>
+          <li class="col-md-6"><%= image_tag story.phototwo, {height: 120} %></li>
         </ul>
         <!-- Create single item array to use .map haml hack below for method joining -->
         <% story_arr = [] %>
