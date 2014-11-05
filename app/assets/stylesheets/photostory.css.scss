@@ -29,12 +29,23 @@ body {
     width: 100%;
     #signout {
     	float: right;
-    	a {
+    	span {
     		color: white;
     		font-size: 1.5em;
     	}
     }
    
+}
+
+h1{
+	width: 100;
+	padding-right: 0px;
+	#email {
+		padding-left: 0px;
+	}
+	border-bottom: 1px solid gray;
+	padding-bottom: 20px;
+
 }
 
 li {
@@ -44,14 +55,15 @@ li {
 #photoDiv {
 	background-color: rgba(0, 0, 0, 0.7);
 	border: 5px solid white;
+	border-radius: 10px;
 	color: white;
 	img {
 		border: 3px solid white;
-		border-radius: 4px;
+		border-radius: 6px;
 		margin-bottom: 5px;
 	}
 	footer {
-		margin-bottom: 3px;
+		margin-bottom: 8px;
 	}
 }
 
@@ -60,9 +72,9 @@ img {
 	width: 120px;
 }
 
+/*modal btn*/
 .btn {
 	border-radius: 0px;
-	margin-bottom: 20px;
 }
 
 .btn:active,
@@ -74,6 +86,7 @@ img {
           box-shadow: none;
 }
 
+/*new photo story button*/
 .btn-lg {
-	margin-top: 20px;
+	float: right;
 }
