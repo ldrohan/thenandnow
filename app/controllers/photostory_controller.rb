@@ -14,9 +14,13 @@ class PhotostoryController < ApplicationController
 	end	
 
 	def create
-		binding.pry
-		@story = Story.new(story_params)
+		@story = Story.new
+		@story.name = params['photoStory']['name']
+		@story.photoone = params['photoStory']['fileImage']
+		@story.phototwo = params['photoStory']['apiImage']
+		@story.location = params['photoStory']['address']
 		@story.user_id = current_user.id if current_user
+
 		respond_to do |format|
 			if @story.save
 				format.json { render json: @story, status: :created }
