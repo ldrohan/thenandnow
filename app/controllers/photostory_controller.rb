@@ -31,12 +31,13 @@ class PhotostoryController < ApplicationController
 		end
 	end
 		
-	def delete
-		@story = Story.find(params[:id])
+	def destroy
+		@story = Story.find(params['id'])
     @story.destroy
     
     respond_to do |format|
-      format.json { render json: @story, status: :ok }
+      format.json { head :no_content }
+      format.js   { render :layout => false }
     end
 	end	
 

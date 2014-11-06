@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   root 'photostory#index'
 
   get 'photostory/index' => 'photostory#index'
-  get 'photostory/delete' => 'photostory#delete'
+  
+  delete 'photostory/:id' => 'photostory#destroy'
 
   post 'photostory/create' => 'photostory#create'
   # The priority is based upon order of creation: first created -> highest priority.

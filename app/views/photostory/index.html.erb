@@ -19,8 +19,11 @@
 <div id="photostoriescontainer" class="container">
   <div class="row">
 <% @stories.each do |story| %>
-    <div id="photoDiv" class="container col-lg-4 col-md-4 col-sm-4">
-      <button class="dltButton btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
+    <div id= <%= story.id.to_s  %> class="photoDiv container col-lg-4 col-md-4 col-sm-4">
+      <button class="dltButton btn btn-danger btn-xs">
+        <span class="glyphicon glyphicon-remove"></span>
+         <%#= button_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'dltButton' %> 
+      </button>
       <h2><%= story.name.capitalize  %></h2>
         <ul class="container col-md-12">
           <li class="col-md-6"><%= image_tag story.photoone, {height: 120} %></li>
