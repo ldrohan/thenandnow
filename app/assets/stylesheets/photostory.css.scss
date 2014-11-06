@@ -7,7 +7,7 @@
 }*/
 body {
 	text-align: center;
-	/*background: url("http://img.sccnn.com/bimg/337/0385.jpg");*/
+	/*background: url("http://www.icanbecreative.com/res/freeweb/2009/11/wallpaper-texture-old-paper.jpg");*/
 	background-size: cover;
 	color: black;
 }
@@ -63,6 +63,12 @@ li {
 		border: 3px solid white;
 		border-radius: 6px;
 		margin-bottom: 5px;
+	}
+	.btn-danger {
+		float: right;
+		margin-top: 4px;
+		margin-right: -10px;
+		border-radius: 3px;
 	}
 	footer {
 		margin-bottom: 8px;

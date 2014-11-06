@@ -25,4 +25,9 @@ $(document).ready(function(){
 			});
 	}
 
+	// Delete Photo Story
+	$('.dltButton').click(function(){
+		$(this).closest('.container').remove();
+	});
+
 });
