@@ -52,6 +52,8 @@ li {
 	list-style-type: none;
 }
 
+#photostoriescontainer {margin-bottom: 25px;}
+
 #photoDiv {
 	background-color: rgba(0, 0, 0, 0.7);
 	border: 5px solid white;
@@ -89,4 +91,10 @@ img {
 /*new photo story button*/
 .btn-lg {
 	float: right;
+}
+
+.modal-dialog {margin-top: 13%;}
+.modal-content {
+	color: white;
+	background-color: rgba(207, 59, 59, 0.9);
 }

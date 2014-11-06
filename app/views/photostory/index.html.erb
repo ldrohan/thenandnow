@@ -9,7 +9,8 @@
 
 <h1 class="container">
   <span id="email" class="col-md-6"><%= current_user.email.capitalize  %>'s Stories</span>
-  <span class="col-md-3"></span> 
+  <span class="col-md-3"></span>
+  <!-- Button trigger modal --> 
   <button id="showModalButton" type="button" class="col-md-3 btn btn-primary btn-lg" data-toggle="modal" data-target="#newStoryModal">
     Create New Photo Story
   </button>
@@ -32,8 +33,6 @@
 <% end %>
   </div>    
 </div> 
-<!-- Button trigger modal -->
-
 
 <!-- Modal -->
 <div class="modal fade" id="newStoryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -57,7 +56,7 @@
             <!-- <label for="exampleInputFile">Photo File</label>
             <input name="filePhoto" type="file" name="photo" />
             <! <input name="photoTwo" type="file" id="photoInputFile"> -->
-            <label for="photoOne">Nastolgic Photo URL</label>
+            <label for="photoOne">Nostalgic Photo URL</label>
             <input name="filePhoto" type="string" class="form-control" id="filePhoto" placeholder="URL">
           </div>
           <button id="formSubmit" type="submit" class="btn btn-default">Submit</button>
