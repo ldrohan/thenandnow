@@ -43,7 +43,7 @@ $(document).ready(function(){
 		$.ajax({url:(postURL), method: ('post'), 
 				data: {"photoStory": {"name":storyName, "address":address, "apiImage":imgAPI + address, "fileImage":fileImage}}, 
 					dataType: "json", success: function(data) {
-						$($photoDiv).append(strOne + storyName + strTwo + imgAPI + address + strThree + fileImage + strFour + address.split("%20").join(" ") + strLast);
+						$($photoDiv).append(strOne + storyName + strTwo + fileImage + strThree + imgAPI + address + strFour + address.split("%20").join(" ") + strLast);
 						$('#newStoryModal').modal('hide');
 						$(':input','#ajaxForm').val('');
   
