@@ -51,17 +51,20 @@ $(document).ready(function(){
 	
 	// Delete Photo Story
 	$('.dltButton').on('click', function($noob) {
-		var $container = $(this).closest('.container');
-		console.log($container.attr('id'));
-		$.ajax({
-		  url: "/photostory/" + $container.attr('id'),
-		  type: "delete",
-		  dataType: "json",
-		  data: {"_method":"destroy"},
-		  	dataType: "json", success: function(data) {
-					$container.fadeOut();
-				}				
-		});
+		var result = confirm("Are you sure you want to delete your photo story?");
+		if (result==true) {
+			var $container = $(this).closest('.container');
+			console.log($container.attr('id'));
+			$.ajax({
+			  url: "/photostory/" + $container.attr('id'),
+			  type: "delete",
+			  dataType: "json",
+			  data: {"_method":"destroy"},
+			  	dataType: "json", success: function(data) {
+						$container.fadeOut();
+					}				
+			});
+		}
 	});
 
 
