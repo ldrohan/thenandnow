@@ -69,7 +69,7 @@ li {
 	}
 	.btn-danger {
 		float: right;
-		margin-top: 4px;
+		margin-top: 5px;
 		margin-right: -10px;
 		border-radius: 3px;
 	}
@@ -114,4 +114,13 @@ img {
 .modal-content {
 	color: white;
 	background-color: rgba(207, 59, 59, 0.9);
+}
+
+.modalImage {
+	display: inline;
+	margin-right: 15px;
+	img {
+		height: 320px;
+		width: 240px;
+	}
 }

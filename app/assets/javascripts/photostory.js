@@ -9,7 +9,7 @@ $(document).ready(function(){
 		var fileImage = postData[2].value
 
 		var $photoDiv = '.row'
-		var imgAPI = "https://maps.googleapis.com/maps/api/streetview?size=120x120&fov=120&pitch=10&location="
+		var imgAPI = "https://maps.googleapis.com/maps/api/streetview?size=350x350&fov=120&pitch=10&location="
 		var strOne="";
 				strOne += "<div id=\"noob\" class=\"photoDiv container col-lg-4 col-md-4 col-sm-4\">";
 				strOne += "      <button class=\"dltButton btn btn-danger btn-xs\">";
@@ -39,6 +39,7 @@ $(document).ready(function(){
 
 	// Save photostory to DB and append to page on success
 	function ajaxPOST(strOne,strTwo,strThree,strFour,strLast,postURL,storyName,address,imgAPI,fileImage,$photoDiv) {
+		$("#noStories").fadeOut();
 		$.ajax({url:(postURL), method: ('post'), 
 				data: {"photoStory": {"name":storyName, "address":address, "apiImage":imgAPI + address, "fileImage":fileImage}}, 
 					dataType: "json", success: function(data) {
@@ -48,7 +49,13 @@ $(document).ready(function(){
 			});
 		
 	}
-	
+
+	$('.glyphicon-eye-open').click(function(){
+		var id = $(this).closest('.container').attr('id');
+		console.log(id);
+		$('#largePhotoModal' + id).modal('show');
+	});
+
 	// Delete Photo Story
 	$('.dltButton').on('click', function($noob) {
 		var result = confirm("Are you sure you want to delete your photo story?");
