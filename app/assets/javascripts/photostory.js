@@ -49,13 +49,13 @@ $(document).ready(function(){
   
 				} 
 			});
-		
 	}
 
 	$('.glyphicon-eye-open').click(function(){
 		var id = $(this).closest('.container').attr('id');
 		$('#largePhotoModal' + id).modal('show');
 	});
+
 
 	// Delete Photo Story
 	$('.dltButton').on('click', function($noob) {

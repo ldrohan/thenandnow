@@ -38,7 +38,8 @@
         <% story_arr.push(story) %>
       <footer> 
         <span class="glyphicon glyphicon-eye-open"></span>
-        <%= story_arr.map{|story| story.location}.join(" ").split("%20").join(" ") %> 
+        <%= story_arr.map{|story| story.location}.join(" ").split("%20").map(&:capitalize).join(" ") %>
+        <i class="fa fa-facebook-square"></i> 
       </footer>
     </div>   
 <% end %>
