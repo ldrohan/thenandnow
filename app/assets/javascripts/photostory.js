@@ -45,6 +45,8 @@ $(document).ready(function(){
 					dataType: "json", success: function(data) {
 						$($photoDiv).append(strOne + storyName + strTwo + imgAPI + address + strThree + fileImage + strFour + address.split("%20").join(" ") + strLast);
 						$('#newStoryModal').modal('hide');
+						$(':input','#ajaxForm').val('');
+  
 				} 
 			});
 		
@@ -52,7 +54,6 @@ $(document).ready(function(){
 
 	$('.glyphicon-eye-open').click(function(){
 		var id = $(this).closest('.container').attr('id');
-		console.log(id);
 		$('#largePhotoModal' + id).modal('show');
 	});
 
