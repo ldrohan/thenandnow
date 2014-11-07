@@ -33,6 +33,7 @@
         <% story_arr = [] %>
         <% story_arr.push(story) %>
       <footer> 
+        <span class="glyphicon glyphicon-eye-open"></span>
         <%= story_arr.map{|story| story.location}.join(" ").split("%20").join(" ") %> 
       </footer>
     </div>   

@@ -11,7 +11,7 @@ $(document).ready(function(){
 		var $photoDiv = '.row'
 		var imgAPI = "https://maps.googleapis.com/maps/api/streetview?size=120x120&fov=120&pitch=10&location="
 		var strOne="";
-				strOne += "<div class=\"photoDiv container col-lg-4 col-md-4 col-sm-4\">";
+				strOne += "<div id=\"noob\" class=\"photoDiv container col-lg-4 col-md-4 col-sm-4\">";
 				strOne += "      <button class=\"dltButton btn btn-danger btn-xs\">";
 				strOne += "        <span class=\"glyphicon glyphicon-remove\"><\/span>";
 				strOne += "      <\/button>";
@@ -27,7 +27,7 @@ $(document).ready(function(){
 		var strFour="";
 				strFour += "/><\/li>";
 				strFour += "        <\/ul>";
-				strFour += "      <footer> ";
+				strFour += "      <footer> <span class=\"glyphicon glyphicon-eye-open\"></span> ";
 		var strLast="";
 				strLast += "<\/footer>";
 				strLast += "    <\/div>  ";
@@ -46,11 +46,12 @@ $(document).ready(function(){
 						$('#newStoryModal').modal('hide');
 				} 
 			});
+		
 	}
-
+	
 	// Delete Photo Story
-	$('.dltButton').click(function(){
-		var $container = $(this).closest('.container')
+	$('.dltButton').on('click', function($noob) {
+		var $container = $(this).closest('.container');
 		console.log($container.attr('id'));
 		$.ajax({
 		  url: "/photostory/" + $container.attr('id'),
@@ -58,7 +59,7 @@ $(document).ready(function(){
 		  dataType: "json",
 		  data: {"_method":"destroy"},
 		  	dataType: "json", success: function(data) {
-								$container.fadeOut();
+					$container.fadeOut();
 				}				
 		});
 	});

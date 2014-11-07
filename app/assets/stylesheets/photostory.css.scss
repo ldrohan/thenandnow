@@ -29,9 +29,12 @@ body {
     width: 100%;
     #signout {
     	float: right;
+    	a {
+    		font-size: 1.5em;
+    	}
     	span {
     		color: white;
-    		font-size: 1.5em;
+    		font-size: 2.5em;
     	}
     }
    
@@ -72,6 +75,14 @@ li {
 	}
 	footer {
 		margin-bottom: 8px;
+		span {
+			float: left;
+			font-size: 16px;
+		}
+		span:hover {
+			color: #00FFFF;
+			cursor: pointer;
+		}
 	}
 }
 
