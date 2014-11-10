@@ -1,13 +1,13 @@
-<nav class="navbar navbar-default" role="navigation">
-<!--   <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p> -->
-  <div class="navbar-header">
+ 
+<div id="main-nav-cont" class="main-nav">
+  <div class="container">
+    <p class="logo-cont"><span class="logo" href="/"><span class="glyphicon glyphicon-globe"></span> Then And Now</span>
 
-    <span class="navbar-brand"> <span class="glyphicon glyphicon-globe"></span>  Then And Now</span>
-    <div id="signout"> <%= link_to :logout, destroy_user_session_path, :method => :delete %></div>
-  </div>
-</nav>
-
+    </p>
+    <p id="logout"> <%= link_to :logout, destroy_user_session_path, :method => :delete %> </p>
+                           
+  </div><!--/container-->
+</div>
 <h1 class="container">
   <span id="email"><%= current_user.email.capitalize  %>'s Stories</span>
   <!-- Button trigger modal --> 
