@@ -11,7 +11,7 @@
   <span id="email" class="col-md-6"><%= current_user.email.capitalize  %>'s Stories</span>
   <span class="col-md-3"></span>
   <!-- Button trigger modal --> 
-  <p id="count"> <%= @stories.length %> </p><button id="showModalButton" type="button" class="col-md-3 btn btn-primary btn-lg" data-toggle="modal" data-target="#newStoryModal">
+  <button id="showModalButton" type="button" class="col-md-3 btn btn-primary btn-lg" data-toggle="modal" data-target="#newStoryModal">
     Create New Photo Story
   </button>
 </h1>
@@ -39,7 +39,7 @@
       <footer> 
         <span class="glyphicon glyphicon-eye-open"></span>
         <%= story_arr.map{|story| story.location}.join(" ").split("%20").map(&:capitalize).join(" ") %>
-        <i class="fa fa-facebook-square"></i> 
+        <div class="fb-share-button" data-href="http://www.yahoo.com" data-layout="icon_link"></div>
       </footer>
     </div>   
 <% end %>
@@ -97,3 +97,4 @@
   </div>
 </div>
 <% end %>
+<%= render 'footer'  %>
