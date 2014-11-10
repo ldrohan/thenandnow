@@ -2,16 +2,16 @@
 <!--   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p> -->
   <div class="navbar-header">
-    <span class="navbar-brand">Then And Now</span>
+
+    <span class="navbar-brand"> <span class="glyphicon glyphicon-globe"></span>  Then And Now</span>
     <div id="signout"> <%= link_to :logout, destroy_user_session_path, :method => :delete %></div>
   </div>
 </nav>
 
 <h1 class="container">
-  <span id="email" class="col-md-6"><%= current_user.email.capitalize  %>'s Stories</span>
-  <span class="col-md-3"></span>
+  <span id="email"><%= current_user.email.capitalize  %>'s Stories</span>
   <!-- Button trigger modal --> 
-  <button id="showModalButton" type="button" class="col-md-3 btn btn-primary btn-lg" data-toggle="modal" data-target="#newStoryModal">
+  <button id="showModalButton" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newStoryModal">
     Create New Photo Story
   </button>
 </h1>
@@ -39,7 +39,7 @@
       <footer> 
         <span class="glyphicon glyphicon-eye-open"></span>
         <%= story_arr.map{|story| story.location}.join(" ").split("%20").map(&:capitalize).join(" ") %>
-        <div class="fb-share-button" data-href="http://www.yahoo.com" data-layout="icon_link"></div>
+        <div class="fb-share-button" data-href="https://thenandnow.herokuapp.com/" data-layout="icon_link"></div>
       </footer>
     </div>   
 <% end %>

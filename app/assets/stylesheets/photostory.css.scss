@@ -1,13 +1,10 @@
-// Place all the styles related to the photostory controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 @import "bootstrap";
 /** {
 	border: 1px solid red;
 }*/
 body {
 	text-align: center;
-	/*background: url("http://www.icanbecreative.com/res/freeweb/2009/11/wallpaper-texture-old-paper.jpg");*/
 	background-size: cover;
 	color: black;
 }
@@ -18,11 +15,12 @@ body {
 	border-radius: 0px;
 	.navbar-brand {
 		color: white;
-		float: none;
+		float: left;
 		font-size: 3em;
 	}
 }
 .navbar-header {
+		font-family: 'Slabo 13px', serif;
     float: left;
     padding: 15px;
     text-align: center;
@@ -44,7 +42,9 @@ h1{
 	width: 100;
 	padding-right: 0px;
 	#email {
-		padding-left: 0px;
+		font-size: .7em;
+		padding-top: 11px;
+		float: left;
 	}
 	border-bottom: 1px solid gray;
 	padding-bottom: 20px;

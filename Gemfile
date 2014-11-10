@@ -4,6 +4,8 @@ gem 'pry'
 
 gem 'bootstrap-sass'
 
+gem 'autoprefixer-rails'
+
 gem 'carrierwave'
 
 gem 'devise'
