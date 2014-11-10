@@ -11,7 +11,7 @@
   <span id="email" class="col-md-6"><%= current_user.email.capitalize  %>'s Stories</span>
   <span class="col-md-3"></span>
   <!-- Button trigger modal --> 
-  <button id="showModalButton" type="button" class="col-md-3 btn btn-primary btn-lg" data-toggle="modal" data-target="#newStoryModal">
+  <p id="count"> <%= @stories.length %> </p><button id="showModalButton" type="button" class="col-md-3 btn btn-primary btn-lg" data-toggle="modal" data-target="#newStoryModal">
     Create New Photo Story
   </button>
 </h1>

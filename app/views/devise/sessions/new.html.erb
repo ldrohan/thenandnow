@@ -1,3 +1,11 @@
+<%= render 'header' %>
+
+<p>Welcome to Then And Now</p>
+
+<p>Then And Now allows Users to upload an old photo with an address and populates the most current Google Street view
+    image associated with that address. Share with friends!
+</p>
+
 <h2>Sign in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -15,3 +23,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<%= render 'footer'  %>
