@@ -9,7 +9,7 @@ body {
 	color: black;
 }
 .navbar-default {
-	padding: 15px;
+	/*padding: 15px;*/
 	background-color: #cf3b3b;
 	border: none;
 	border-radius: 0px;
@@ -48,7 +48,10 @@ li {
 	list-style-type: none;
 }
 
-#photostoriescontainer {margin-bottom: 150px;}
+#photostoriescontainer {
+	margin-bottom: 150px;
+	padding: 20px;
+}
 
 .photoDiv {
 	background-color: rgba(0, 0, 0, 0.7);

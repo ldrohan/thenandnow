@@ -56,7 +56,6 @@ $(document).ready(function(){
 		$('#largePhotoModal' + id).modal('show');
 	});
 
-
 	// Delete Photo Story
 	$('.dltButton').on('click', function($noob) {
 		var result = confirm("Are you sure you want to delete your photo story?");

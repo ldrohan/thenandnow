@@ -1,6 +1,6 @@
  
 <div id="main-nav-cont" class="main-nav">
-  <div class="container">
+  <div class="header container">
     <p class="logo-cont"><span class="logo" href="/"><span class="glyphicon glyphicon-globe"></span> Then And Now</span>
 
     </p>
@@ -22,7 +22,7 @@
 
 <div id="photostoriescontainer" class="container">
   <div class="row">
-<% @stories.each do |story| %>
+<% @stories.reverse.each do |story| %>
     <div id= <%= story.id.to_s  %> class="photoDiv container col-lg-4 col-md-4 col-sm-4">
       <button class="dltButton btn btn-danger btn-xs">
         <span class="glyphicon glyphicon-remove"></span>
@@ -80,7 +80,7 @@
 
 <% @stories.each do |story| %>
 
-<div class="modal fade" id="largePhotoModal<%=story.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="picModal modal fade" id="largePhotoModal<%=story.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -88,10 +88,17 @@
         <h4 class="modal-title" id="myModalLabel"><%= story.name.capitalize %></h4>
       </div>
       <div class="modal-body">
-        <ul>
-          <li class="modalImage"><%= image_tag story.photoone, {height: 420} %></li>
-          <li class="modalImage"><%= image_tag story.phototwo, {height: 420} %></li>
-        </ul>
+        <div class="container">
+          <div class="row">
+            <div id="map-canvas"></div>
+          </div>  
+        </div>
+
+       <!--  <ul>
+          <li class="modalImage"><%#= image_tag story.photoone, {height: 420} %></li>
+          <li class="modalImage"><%#= image_tag story.phototwo, {height: 420} %></li>
+        </ul> -->
+    
       </div>
     </div>
   </div>
