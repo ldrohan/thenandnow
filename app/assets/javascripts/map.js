@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var map;        
-              var myCenter=new google.maps.LatLng(53, -1.33);
+  var myCenter=new google.maps.LatLng(53, -1.33);
   var marker=new google.maps.Marker({
       position:myCenter
   });
