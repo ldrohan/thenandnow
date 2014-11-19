@@ -46,9 +46,8 @@ $(document).ready(function(){
 						$($photoDiv).append(strOne + storyName + strTwo + fileImage + strThree + imgAPI + address + strFour + address.split("%20").join(" ") + strLast);
 						$('#newStoryModal').modal('hide');
 						$(':input','#ajaxForm').val('');
-  
-				} 
-			});
+  				} 
+		});
 	}
 
 	$('.glyphicon-eye-open').click(function(){

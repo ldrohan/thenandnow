@@ -114,6 +114,19 @@ img {
 .modal-content {
 	color: white;
 	background-color: rgba(207, 59, 59, 0.9);
+	max-height: 500px;
+	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;	
+	ul {
+		margin-left: -23px;
+		li {
+			img {
+				border: 3px solid white;
+				border-radius: 3px;
+			}
+		}
+	}
 }
 
 .modalImage {
