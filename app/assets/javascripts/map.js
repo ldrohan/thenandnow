@@ -1,9 +1,13 @@
 $(document).ready(function(){
   var map;        
-  var myCenter=new google.maps.LatLng(53, -1.33);
+  var myCenter=new google.maps.LatLng(37.794294, -122.409821);
   var marker=new google.maps.Marker({
       position:myCenter
   });
+
+  var numOfModals = document.getElementsByClassName('picModal').length;
+
+  for (var i = 0; i <= numOfModals.length; i++) {}
 
   function initialize() {
     var mapProp = {
@@ -29,7 +33,6 @@ $(document).ready(function(){
   google.maps.event.addDomListener(window, "resize", resizingMap());
 
   $('.picModal').on('show.bs.modal', function() {
-    console.log(this);
      //Must wait until the render of the modal appear, thats why we use the resizeMap and NOT resizingMap!! ;-)
      resizeMap();
   })
