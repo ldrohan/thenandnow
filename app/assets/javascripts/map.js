@@ -29,6 +29,7 @@ $(document).ready(function(){
   google.maps.event.addDomListener(window, "resize", resizingMap());
 
   $('.picModal').on('show.bs.modal', function() {
+    console.log(this);
      //Must wait until the render of the modal appear, thats why we use the resizeMap and NOT resizingMap!! ;-)
      resizeMap();
   })
@@ -44,8 +45,6 @@ $(document).ready(function(){
      google.maps.event.trigger(map, "resize");
      map.setCenter(center); 
   }
-
-
 
 });
 
