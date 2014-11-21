@@ -1,6 +1,5 @@
 $(document).ready(function(){
   $('.map').each(function() {
-    console.log(this.id);
     var container = this;  
     var map;
     var geoCoder = new google.maps.Geocoder(); 

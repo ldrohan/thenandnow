@@ -1,28 +1,7 @@
-== README
+Then And Now allows users to upload/link an old photograph and uses the Google Street View API to capture a current image of that image, creating a photo story or a time juxtaposed memory of that location. Clicking on the Eye on the photo story allows the user to check out enlarged images as well as a google Map centered on the photostory's location. By placing the figure on the map you can take a virtual walking tour of that neighborhood. The Facebook icon will (eventually) allow users to share these stories via their facebook feed.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+API's:
+	Google Maps
+	Google Street View
+	Google Geocoder
+	Facebook Share

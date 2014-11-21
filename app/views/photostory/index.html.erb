@@ -1,7 +1,7 @@
  
 <div id="main-nav-cont" class="main-nav">
   <div class="header container">
-    <p class="logo-cont"><span class="logo" href="/"><span class="glyphicon glyphicon-globe"></span> Then And Now</span>
+    <p class="logo-cont"><span class="glyphicon glyphicon-globe"></span> <span class="logo" href="/">Then And Now</span>
 
     </p>
     <p id="logout"> <%= link_to :logout, destroy_user_session_path, :method => :delete %> </p>
@@ -29,11 +29,9 @@
          <%#= button_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'dltButton' %> 
       </button>
       <h2><%= story.name.capitalize  %></h2>
-        <!-- <ul class="container col-md-12"> -->
-          <li class="col-md-6"><%= image_tag story.photoone, {height: 120} %></li>
-          <li class="col-md-6"><%= image_tag story.phototwo, {height: 120} %></li>
-        <!-- </ul> -->
-        <!-- Create single item array to use .map hack below for method joining -->
+        <li class="col-md-6"><%= image_tag story.photoone, {height: 120} %></li>
+        <li class="col-md-6"><%= image_tag story.phototwo, {height: 120} %></li>
+      <!-- Create single item array to use .map hack below for method joining -->
         <% story_arr = [] %>
         <% story_arr.push(story) %>
       <footer> 
