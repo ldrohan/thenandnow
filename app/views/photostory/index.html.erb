@@ -29,10 +29,10 @@
          <%#= button_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'dltButton' %> 
       </button>
       <h2><%= story.name.capitalize  %></h2>
-        <ul class="container col-md-12">
+        <!-- <ul class="container col-md-12"> -->
           <li class="col-md-6"><%= image_tag story.photoone, {height: 120} %></li>
           <li class="col-md-6"><%= image_tag story.phototwo, {height: 120} %></li>
-        </ul>
+        <!-- </ul> -->
         <!-- Create single item array to use .map hack below for method joining -->
         <% story_arr = [] %>
         <% story_arr.push(story) %>

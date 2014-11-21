@@ -8,6 +8,7 @@ $(document).ready(function(){
 		var address = postData[1].value.split(" ").join("%20");
 		var fileImage = postData[2].value
 
+
 		var $photoDiv = '.row'
 		var imgAPI = "https://maps.googleapis.com/maps/api/streetview?size=350x350&fov=120&pitch=10&location="
 		var strOne="";
@@ -46,34 +47,40 @@ $(document).ready(function(){
 						$($photoDiv).append(strOne + storyName + strTwo + fileImage + strThree + imgAPI + address + strFour + address.split("%20").join(" ") + strLast);
 						$('#newStoryModal').modal('hide');
 						$(':input','#ajaxForm').val('');
+						deleteStory();
+						openMapModal();
   				} 
 		});
 	}
 
-	$('.glyphicon-eye-open').click(function(){
-		var id = $(this).closest('.container').attr('id');
-		$('#largePhotoModal' + id).modal('show');
-	});
-
-	
+	function openMapModal () {
+		$('.glyphicon-eye-open').click(function(){
+			var id = $(this).closest('.container').attr('id');
+			$('#largePhotoModal' + id).modal('show');
+		});
+	};
+	openMapModal();
 
 	// Delete Photo Story
-	$('.dltButton').on('click', function($noob) {
-		var result = confirm("Are you sure you want to delete your photo story?");
-		if (result==true) {
-			var $container = $(this).closest('.container');
-			console.log($container.attr('id'));
-			$.ajax({
-			  url: "/photostory/" + $container.attr('id'),
-			  type: "delete",
-			  dataType: "json",
-			  data: {"_method":"destroy"},
-			  	dataType: "json", success: function(data) {
-						$container.fadeOut();
-					}				
-			});
-		}
-	});
+	function deleteStory () {
+		$('.dltButton').on('click', function($noob) {
+			var result = confirm("Are you sure you want to delete your photo story?");
+			if (result==true) {
+				var $container = $(this).closest('.container');
+				console.log($container.attr('id'));
+				$.ajax({
+				  url: "/photostory/" + $container.attr('id'),
+				  type: "delete",
+				  dataType: "json",
+				  data: {"_method":"destroy"},
+				  	dataType: "json", success: function(data) {
+							$container.fadeOut();
+						}				
+				});
+			}
+		});
+	};
+	deleteStory();
 
 $('#signup').click(function() {
 	$('#signupModal').modal('show');
